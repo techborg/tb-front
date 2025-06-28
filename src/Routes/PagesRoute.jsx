@@ -28,40 +28,40 @@ function PagesRoute() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/courses" element={<Courses />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/innovation" element={<Innovation/>} />
-      <Route path="/blog" element={<Blog/>} />
-      <Route path="/blog/:id" element={<BlogDetails/>} />
+      <Route path="about" element={<About />} />
+      <Route path="courses" element={<Courses />} />
+      <Route path="contact" element={<Contact />} />
+      <Route path="innovation" element={<Innovation/>} />
+      <Route path="blog" element={<Blog/>} />
+      <Route path="blog/:id" element={<BlogDetails/>} />
 
 
 
-     <Route path="/courses/:id" element={<CourseDetail/>} /> {/* ✅ this is critical */}
-     <Route path="/courses/:id/modules" element={<CourseModules/>} />
+     <Route path="courses/:id" element={<CourseDetail/>} /> {/* ✅ this is critical */}
+     <Route path="courses/:id/modules" element={<CourseModules/>} />
 
-      <Route path="/user/dashboard" element={<UserDashboard/>} />
-      <Route path="/admin/dashboard" element={<AdminDashboard/>} />
-      <Route path='/tutor/dashboard'element={<TutorDashboard/>}/>
-
-
-      <Route path="/admin/courses" element={<AdminManageCourses/> } /> 
+      <Route path="user/dashboard" element={<UserDashboard/>} />
+      <Route path="admin/dashboard" element={<AdminDashboard/>} />
+      <Route path='tutor/dashboard'element={<TutorDashboard/>}/>
 
 
-      <Route path="/admin-profile" element={<AdminProfile/>} />
-      <Route path="/tutor-profile" element={<TutorProfile/>} />
-      <Route path="/user-profile" element={<UserProfile/>} />
-
-      <Route path='/settings'element={<Settings/>}/>
-      <Route path='/certificates'element={<Certificates/>}/>
-      <Route path="/invoices" element={<Invoice/>} />
-      <Route path='/exam'element={<Exam/>}/>
-
-      
+      <Route path="admin/courses" element={<AdminManageCourses/> } />
 
 
-     <Route path='/login' element={<Login/>}/>
-     
+      <Route path="admin-profile" element={<AdminProfile/>} />
+      <Route path="tutor-profile" element={<TutorProfile/>} />
+      <Route path="user-profile" element={<UserProfile/>} />
+
+      <Route path='settings'element={<Settings/>}/>
+      <Route path='certificates'element={<Certificates/>}/>
+      <Route path="invoices" element={<Invoice/>} />
+      <Route path='exam'element={<Exam/>}/>
+
+
+
+
+     <Route path='login' element={<Login/>}/>
+
     </Routes>
   );
 }
