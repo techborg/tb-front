@@ -28,7 +28,7 @@ export default function Settings() {
   const handlePrivacyChange = (e) => setPrivacy({ ...privacy, [e.target.name]: e.target.checked });
 
   const updateProfile = async () => {
-    const res = await fetch(`http://localhost:8000/api/auth/update/${form.id}`, {
+    const res = await fetch(`https://tb-back.onrender.com/api/auth/update/${form.id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form),
@@ -41,7 +41,7 @@ export default function Settings() {
   };
 
   const updatePassword = async () => {
-    const res = await fetch('http://localhost:8000/api/auth/change-password', {
+    const res = await fetch('https://tb-back.onrender.com/api/auth/change-password', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: form.email, ...passwords }),
@@ -51,7 +51,7 @@ export default function Settings() {
   };
 
   const savePreferences = async () => {
-    const res = await fetch(`http://localhost:8000/api/auth/preferences/${form.id}`, {
+    const res = await fetch(`https://tb-back.onrender.com/api/auth/preferences/${form.id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(preferences),
@@ -61,7 +61,7 @@ export default function Settings() {
   };
 
   const savePrivacy = async () => {
-    const res = await fetch(`http://localhost:8000/api/auth/privacy/${form.id}`, {
+    const res = await fetch(`https://tb-back.onrender.com/api/auth/privacy/${form.id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(privacy),
@@ -72,7 +72,7 @@ export default function Settings() {
 
   const deleteAccount = async () => {
     if (window.confirm('Are you sure you want to delete your account?')) {
-      await fetch(`http://localhost:8000/api/auth/delete/${form.id}`, {
+      await fetch(`https://tb-back.onrender.com/api/auth/delete/${form.id}`, {
         method: 'DELETE',
       });
       localStorage.clear();
