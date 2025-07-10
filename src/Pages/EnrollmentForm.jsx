@@ -14,7 +14,7 @@ const EnrollmentForm = () => {
 
   // Fetch courses from backend
   useEffect(() => {
-    fetch('http://localhost:8000/api/courses')
+    fetch('https://tb-back.onrender.com/api/courses')
       .then((res) => res.json())
       .then((data) => setCourses(data))
       .catch((err) => console.error('Error fetching courses:', err));

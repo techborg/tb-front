@@ -10,7 +10,7 @@ function CourseDetail() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:8000/api/courses/${id}`)
+    fetch(`https://tb-back.onrender.com/api/courses/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error('Course not found');
         return res.json();

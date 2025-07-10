@@ -8,7 +8,7 @@ export default function CourseTextContent() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/courses/${id}`)
+    fetch(`https://tb-back.onrender.com/api/courses/${id}`)
       .then(res => res.json())
       .then(data => {
         setCourse(data);
