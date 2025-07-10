@@ -51,7 +51,7 @@ function HomeCms() {
   // Submit form
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:8000/api/home/update', {
+    fetch('https://tb-back.onrender.com/api/home/update', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form)
