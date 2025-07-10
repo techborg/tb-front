@@ -7,7 +7,7 @@ function Courses() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://tb-back.onrender.com/api/courses')
+    fetch('http://localhost:8000/api/courses')
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);

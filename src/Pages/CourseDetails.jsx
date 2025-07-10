@@ -10,7 +10,7 @@ function CourseDetail() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://tb-back.onrender.com/api/courses/${id}`)
+    fetch(`http://localhost:8000/api/courses/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error('Course not found');
         return res.json();
@@ -46,12 +46,22 @@ function CourseDetail() {
           </ul>
 
           <div className="techborg-course-buttons">
-            <Link to="/login" className="techborg-enroll-btn">
-              Enroll Now
-            </Link>
+            {localStorage.getItem('user') ? (
+              <Link to={'/enroll'} className="techborg-enroll-btn">
+                Enroll Now
+              </Link>
+            ) : (
+              <Link to="/login" className="techborg-enroll-btn">
+                Enroll Now
+              </Link>
+            )}
             <Link to={`/courses/${id}/modules`} className="techborg-module-btn">
               View Modules
             </Link>
+            <Link to={`/courses/${id}/content`} className="techborg-module-btn">
+  Read Learning Material
+</Link>
+
           </div>
         </div>
       </section>

@@ -27,8 +27,8 @@ function Login() {
     setError('');
 
     const url = isSignup
-      ? 'https://tb-back.onrender.com/api/auth/register'
-      : 'https://tb-back.onrender.com/api/auth/login';
+      ? 'http://localhost:8000/api/auth/register'
+      : 'http://localhost:8000/api/auth/login';
 
     const payload = isSignup
       ? formData

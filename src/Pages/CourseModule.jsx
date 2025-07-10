@@ -9,7 +9,7 @@ function CourseModules() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://tb-back.onrender.com/api/courses/${id}`)
+    fetch(`http://localhost:8000/api/courses/${id}`)
       .then(res => res.json())
       .then(data => {
         setCourse(data);
